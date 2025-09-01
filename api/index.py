@@ -7,7 +7,7 @@ def handle_request():
     name = request.args.get('name', default='qqqq')
     chat_id = request.args.get('id', default='0')
     item = request.args.get('item', default='')
-    return name, 'ok'
+    return 'ok'
 
 @app.route('/123')
 def q123():

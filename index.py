@@ -7,7 +7,6 @@ def handle_request():
     name = request.args.get('name', default='')
     chat_id = request.args.get('id', default='0')
     item = request.args.get('item', default='')
-
     return 'ok'
 
 

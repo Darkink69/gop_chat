@@ -9,6 +9,11 @@ def handle_request():
     item = request.args.get('item', default='')
     return 'ok'
 
+@app.route('/123')
+def q123():
+
+    return 'ok - 123'
+
 
 if __name__ == '__main__':
     app.run(debug=True)

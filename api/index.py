@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import gop
 
 app = Flask(__name__)
 
@@ -10,9 +11,10 @@ def handle_request():
     return 'ok'
 
 @app.route('/123')
-def q123():
+def test():
+    res = gop.get_gop()
 
-    return 'ok - 123'
+    return res
 
 
 if __name__ == '__main__':

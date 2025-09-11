@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import gop
+import banana
 
 app = Flask(__name__)
 
@@ -10,9 +11,17 @@ def handle_request():
     item = request.args.get('item', default='')
     return 'ok'
 
+
 @app.route('/123')
 def test():
     res = gop.get_gop()
+
+    return (res)
+
+
+@app.route('/456')
+def get_banana():
+    res = banana.get_banana()
 
     return res
 

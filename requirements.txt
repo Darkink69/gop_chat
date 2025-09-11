@@ -1,6 +1,3 @@
 Flask~=2.3.3
 requests~=2.32.4
 google-genai
-genai
-distlib~=0.3.6
-protobuf~=3.19.6

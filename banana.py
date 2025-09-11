@@ -12,6 +12,7 @@ def get_banana():
     )
     print(response.text)
     return response.text
+
     # response = client.models.generate_images(
     #     model='imagen-4.0-generate-001',
     #     prompt='Robot holding a red skateboard',

@@ -1,5 +1,6 @@
-Flask==3.0.3
+Flask~=2.3.3
 requests~=2.32.4
-openai
 google-genai
 genai
+distlib~=0.3.6
+protobuf~=3.19.6

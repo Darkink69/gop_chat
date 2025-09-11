@@ -21,7 +21,8 @@ def test():
 
 @app.route('/456')
 def get_banana():
-    res = banana.get_banana()
+    prompt = request.args.get('prompt', default='')
+    res = banana.get_banana(prompt)
 
     return res
 

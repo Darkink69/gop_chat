@@ -4,11 +4,11 @@ from google.genai import types
 from PIL import Image
 from io import BytesIO
 
-def get_banana():
+def get_banana(prompt):
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash", contents="Расскажи подробно как варить гречку"
+        model="gemini-2.5-flash", contents=prompt
     )
     print(response.text)
     return response.text

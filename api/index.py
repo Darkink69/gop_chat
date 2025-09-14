@@ -16,7 +16,7 @@ def handle_request():
 def test():
     res = gop.get_gop()
 
-    return (res)
+    return res
 
 
 @app.route('/456')

@@ -2,15 +2,15 @@ import os
 from openai import OpenAI
 
 
-def get_gop():
+def get_gop(prompt):
     client = OpenAI(
         api_key=os.environ.get("OPENAI_API_KEY"),
     )
 
     response = client.responses.create(
         model="gpt-5-nano",
-        instructions="Вы опытный повар",
-        input="Как правильно варить макароны?",
+        input=prompt,
+        store=True,
     )
 
     print(response.output_text)

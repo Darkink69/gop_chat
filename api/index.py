@@ -14,7 +14,8 @@ def handle_request():
 
 @app.route('/123')
 def test():
-    res = gop.get_gop()
+    prompt = request.args.get('prompt', default='')
+    res = gop.get_gop(prompt)
 
     return res
 

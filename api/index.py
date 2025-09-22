@@ -17,7 +17,6 @@ def handle_request():
 def test():
     prompt = request.args.get('prompt', default='')
     res = gop.get_gop(prompt)
-
     return res
 
 

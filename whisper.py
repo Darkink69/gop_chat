@@ -9,3 +9,4 @@ def get_transcribe(audio):
 	print(result)
 	return result
 
+# get_transcribe('https://cdn2.101.ru/vardata/modules/musicdb/files/202006/23/db5829042eec86c7212092eb8f84fe59.mp3')

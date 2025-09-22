@@ -25,13 +25,13 @@ def test():
 def get_banana():
     prompt = request.args.get('prompt', default='')
     res = banana.get_banana(prompt)
+    return (res)
 
-    return (res
 
-@app.route('/whisper'))
+@app.route('/whisper')
 def get_transcribe_whisper():
     audio = request.args.get('audio', default='')
-    res = whisper.get_transcribe('https://cdn2.101.ru/vardata/modules/musicdb/files/202006/23/db5829042eec86c7212092eb8f84fe59.mp3')
+    res = whisper.get_transcribe(audio)
     # res = whisper.get_transcribe(audio)
 
     return res

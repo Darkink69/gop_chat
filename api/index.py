@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import gop
 import banana
+import whisper
 
 app = Flask(__name__)
 
@@ -24,6 +25,13 @@ def test():
 def get_banana():
     prompt = request.args.get('prompt', default='')
     res = banana.get_banana(prompt)
+
+    return (res
+
+@app.route('/whisper'))
+def get_transcribe_whisper():
+    # prompt = request.args.get('prompt', default='')
+    res = whisper.get_transcribe_whisper()
 
     return res
 

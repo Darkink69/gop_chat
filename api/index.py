@@ -31,7 +31,7 @@ def get_banana():
 @app.route('/whisper'))
 def get_transcribe_whisper():
     # prompt = request.args.get('prompt', default='')
-    res = whisper.get_transcribe_whisper()
+    res = whisper.get_transcribe()
 
     return res
 

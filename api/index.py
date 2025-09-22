@@ -30,8 +30,8 @@ def get_banana():
 
 @app.route('/whisper'))
 def get_transcribe_whisper():
-    # prompt = request.args.get('prompt', default='')
-    res = whisper.get_transcribe()
+    audio = request.args.get('audio', default='')
+    res = whisper.get_transcribe(audio)
 
     return res
 
